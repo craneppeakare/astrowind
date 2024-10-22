@@ -156,6 +156,7 @@ export interface Price {
 export interface Testimonial {
   title?: string;
   testimonial?: string;
+  rating?: string | Array<string>;
   name?: string;
   job?: string;
   image?: string | unknown;
@@ -283,4 +284,4 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
   callToAction?: CallToAction;
 }
 
-export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
+export interface Contact extends Omit<Headline, 'classes'>, Form, Widget { }

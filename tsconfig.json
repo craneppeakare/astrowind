@@ -8,5 +8,5 @@
       "~/*": ["src/*"]
     }
   },
-  "exclude": ["dist/"]
+  "exclude": ["dist/", "sst.config.ts", ".sst/*"]
 }

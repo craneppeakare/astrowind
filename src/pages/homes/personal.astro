@@ -8,6 +8,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
+import Project from '~/components/widgets/Project.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
 
@@ -313,6 +314,38 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
+
+  <!-- Project Widget *********** -->
+
+  <Project
+    id="portfolio"
+    title="Recent Projects"
+    subtitle="Here is a showcase of stuff I've recently made!"
+    image={{
+      src: '~/assets/images/scrambled-ss.png',
+      alt: 'website preview',
+    }}
+    items={[
+      {
+        title: 'SCRAMBLED Web Game',
+        description: `<ul class="text-muted list-disc list-inside">
+        <li>Web based word game build using React, Material UI, and Typescript.</li>
+        <li>
+          The game will generate 7 random letters and the goal is to find a 7 letter annagram (There can be multiple
+          solutions!).
+        </li>
+        <li>
+          Inclusion of blank tiles (where you can select any letter) makes this project algorithmically interesting!
+        </li>
+        <li>Includes settings to change difficulty, and word bank.</li>
+      </ul>`,
+        image: {
+          src: '~/assets/images/scrambled-ss.png',
+          alt: 'website preview',
+        },
+      },
+    ]}
+  />
 
   <!-- Testimonials Widget *********** -->
 

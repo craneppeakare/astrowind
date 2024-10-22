@@ -1,0 +1,59 @@
+---
+import type { Content as Props } from '~/types';
+import Headline from '../ui/Headline.astro';
+import WidgetWrapper from '../ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline,
+  items = [],
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
+  <Headline
+    title={title}
+    subtitle={subtitle}
+    tagline={tagline}
+    classes={{
+      container: 'max-w-xl fade-in-up-on-scroll sm:mx-auto lg:max-w-2xl',
+      title: 'text-4xl md:text-5xl font-bold tracking-tighter mb-4 font-heading',
+      subtitle: 'max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400',
+    }}
+  />
+  <div class="flex flex-col justify-center max-w-7xl p-4 md:px-8">
+    {
+      items && items.length && (
+        <>
+          {items.map(({ title, description, image }) => (
+            <div class="flex flex-row mb-12 fade-in-up-on-scroll">
+              <div class="w-1/2">
+                {description && <p class="text-bold text-4xl" set:html={title} />}
+                {description && <p class="text-muted" set:html={description} />}
+              </div>
+              {typeof image === 'string' ? (
+                <Fragment set:html={image} />
+              ) : (
+                <Image
+                  class="mx-6 max-w-xs md:max-w-lg rounded border-primary border-4 rotate-3"
+                  width={1919}
+                  height={1079}
+                  sizes="(max-width: 1919px) 100vw, 432px"
+                  layout="responsive"
+                  {...image}
+                />
+              )}
+            </div>
+          ))}
+        </>
+      )
+    }
+  </div>
+</WidgetWrapper>

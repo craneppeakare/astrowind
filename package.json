@@ -1,28 +1,28 @@
 {
-  "name": "@onwidget/astrowind",
-  "version": "1.0.0-beta.48",
-  "description": "AstroWind: A free template using Astro 4.0 and Tailwind CSS. Astro starter theme.",
+  "name": "astrowind",
+  "version": "1.0.0",
+  "description": "My personal custom AstroWind template fork with sst",
   "type": "module",
   "private": true,
   "engines": {
     "node": "^18.17.1 || ^20.3.0 || >= 21.0.0"
   },
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
     "astro": "astro",
+    "build": "astro build",
     "check": "npm run check:astro && npm run check:eslint && npm run check:prettier",
     "check:astro": "astro check",
     "check:eslint": "eslint .",
     "check:prettier": "prettier --check .",
+    "dev": "npx sst dev",
+    "deploy": "npx sst deploy --stage production",
     "fix": "npm run fix:eslint && npm run fix:prettier",
     "fix:eslint": "eslint --fix .",
-    "fix:prettier": "prettier -w ."
+    "fix:prettier": "prettier -w .",
+    "preview": "astro preview",
+    "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.8",
     "@astrojs/sitemap": "^3.2.0",
     "@astrolib/analytics": "^0.6.1",
     "@astrolib/seo": "^1.0.0-beta.8",
@@ -30,12 +30,15 @@
     "astro": "^4.16.2",
     "astro-embed": "^0.7.4",
     "astro-icon": "^1.1.1",
+    "astro-sst": "2.43.5",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
+    "sst": "3.2.38",
     "unpic": "^3.18.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/language-server": "^2.15.3",
     "@astrojs/mdx": "^3.1.8",
     "@astrojs/partytown": "^2.1.2",
     "@astrojs/tailwind": "5.1.2",
