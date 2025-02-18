@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
@@ -53,6 +54,59 @@ const metadata = {
   <!-- Note Widget ******************* -->
 
   <Note />
+
+  <!-- Testimonials Widget ******************* -->
+
+  <Testimonials
+    id="testimonials"
+    title="Hear from our previous users!"
+    tagline="Testimonials"
+    subtitle="Don't just take our word for it"
+    testimonials={[
+      {
+        title: 'Best tool ever!',
+        testimonial:
+          'This web page template is incredibly user-friendly and professional. It saved me hours of design time while maintaining a modern look.',
+        rating: [
+          'tabler:star-filled',
+          'tabler:star-filled',
+          'tabler:star-filled',
+          'tabler:star-filled',
+          'tabler:star-filled',
+        ],
+        name: 'Sarah Johnson',
+        job: 'Marketing Manager at Marketing Solutions',
+      },
+      {
+        title: 'Great starting template!',
+        testimonial:
+          'The layout and customization options are top-notch. My client loves how responsive and visually appealing the site turned out. Highly recommend it—5 stars!',
+        rating: [
+          'tabler:star-filled',
+          'tabler:star-filled',
+          'tabler:star-filled',
+          'tabler:star-filled',
+          'tabler:star-filled',
+        ],
+        name: 'James Lee',
+        job: 'Freelance Web Developer',
+      },
+      {
+        title: 'Does everything right and more',
+        testimonial:
+          'We needed a template that could grow with our business, and this one delivered. It’s intuitive, clean, and helped us increase our website conversions.',
+        rating: [
+          'tabler:star-filled',
+          'tabler:star-filled',
+          'tabler:star-filled',
+          'tabler:star-filled',
+          'tabler:star-filled',
+        ],
+        name: 'Emily Carter',
+        job: 'Co-Founder at Green Earth Startups',
+      },
+    ]}
+  />
 
   <!-- Features Widget *************** -->
 
