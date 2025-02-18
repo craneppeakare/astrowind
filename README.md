@@ -16,7 +16,6 @@
 <details open>
 <summary>Table of Contents</summary>
 
-- [Demo](#demo)
 - [Getting started](#getting-started)
   - [Project structure](#project-structure)
   - [Commands](#commands)
@@ -32,15 +31,7 @@
 
 <br>
 
-## Demo
-
-📌 [https://astrowind.vercel.app/](https://astrowind.vercel.app/)
-
-<br>
-
 ## Getting started
-
-In this version the template supports all the options in the `output` configuration, `static`, `hybrid` and `server`, but the blog only works with `prerender = true`. Next version will be fully compatible with SSR.
 
 ### Project structure
 
@@ -95,14 +86,6 @@ Inside **AstroWind** template, you'll see the following folders and files:
 └── ...
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory if they do not require any transformation or in the `assets/` directory if they are imported directly.
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file `README.md`. Update `src/config.yaml` and contents. Have fun!
-
 <br>
 
 ### Commands
@@ -113,6 +96,7 @@ All commands are run from the root of the project, from a terminal:
 | :------------------ | :------------------------------------------------- |
 | `npm install`       | Installs dependencies                              |
 | `npm run dev`       | Starts sst dev multiplexer at `localhost:4321`     |
+| `npm run start`     | Starts local dev server at `localhost:4321`        |
 | `npm run deploy`    | Deploys your project to production using sst       |
 | `npm run build`     | Build your production site to `./dist/`            |
 | `npm run preview`   | Preview your build locally, before deploying       |
@@ -214,4 +198,4 @@ To customize Font families, Colors or more Elements refer to the following files
 
 ## Acknowledgements
 
-Initially created by [onWidget](https://onwidget.com) and maintained by a community of [contributors](https://github.com/onwidget/astrowind/graphs/contributors).
+Initially created by [onWidget](https://onwidget.com).
