@@ -104,6 +104,12 @@ All commands are run from the root of the project, from a terminal:
 | `npm run fix`       | Run Eslint and format codes with Prettier          |
 | `npm run astro ...` | Run CLI commands like `astro add`, `astro preview` |
 
+Useful commands to know:
+
+| Command                   | Action                                             |
+| :------------------------ | :------------------------------------------------- |
+| `git merge upstream/main` | Merges changes from upstream repo into fork        |
+
 <br>
 
 ### Configuration
