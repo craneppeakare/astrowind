@@ -24,9 +24,11 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: 'static',
+/*  // This is for SSR
   adapter: aws({
     deploymentStrategy: 'static',
   }),
+*/
 
   integrations: [
     tailwind({

@@ -106,9 +106,10 @@ All commands are run from the root of the project, from a terminal:
 
 Useful commands to know:
 
-| Command                   | Action                                             |
-| :------------------------ | :------------------------------------------------- |
-| `git merge upstream/main` | Merges changes from upstream repo into fork        |
+| Command                   | Action                                       |
+| :------------------------ | :------------------------------------------- |
+| `git merge upstream/main` | Merges changes from upstream repo into fork  |
+| `npx sst upgrade`         | Updates sst to latest version                |
 
 <br>
 
